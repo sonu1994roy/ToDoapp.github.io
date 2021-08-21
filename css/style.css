@@ -1,0 +1,257 @@
+* ::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.6rem;
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    background-color: #fff;
+    color: #000;
+    position: relative;
+}
+h1,h2,h3,h4{
+    font-weight: 500;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+
+}
+.container{
+    max-width: 100%;
+    margin: 0 auto;
+}
+@media only screen and (max-width: 1200px){
+    .container{
+        padding: 0 3rem;
+    }
+}
+.header{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    background-color: #b8e4e0;
+    z-index: 1;
+}
+
+.nav{
+    color: rgb(255, 255, 255);
+    padding: 1.6rem 22px;
+}
+.nav.fix-nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    letter-spacing: 0;
+    width: 100%;
+    background-color: #ff9050;
+    box-shadow: #4e4e4e;
+    z-index: 999;
+}
+
+.top-nav{
+display: none;
+}
+.navigation{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo h1{
+    font-size: 2.5rem;
+    color: #fff;
+}
+.logo h1 span{
+    font-weight: bold;
+    color: #ff9050;
+}
+.nav-list{
+    display: flex;
+    margin-right: 30px;
+    align-items: center;
+}
+.nav-item:not(:last-child){
+    margin-right: 0.5rem;
+}
+.nav-link:link,
+.nav-link:visited{
+    color: #fff;
+    /* background: #00000078; */
+ border-radius: 40px;
+    padding: 0.8rem;
+    transition: all 300ms ease-in-out;
+    font-family: 'RocknRoll One', sans-serif;
+}
+.nav-link:hover{
+    border-radius: 0.3rem;
+    background-color: #ff9050;
+}
+.hamburger{
+    display: none;
+}
+@media only screen and (max-width:768px){
+   .menu{
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 80%;
+        height: 100%;
+        max-width: 40rem;
+        background-color: #b8e4e0;
+        transition: all 500ms ease-in-out;
+        z-index: 100;
+    }
+    .menu.show{
+        left: 0;
+    }
+    .textInput {
+        width: 20rem;
+        padding: 1rem 1rem;
+        margin-left:0px;
+    }
+    .top-nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #ff9050;
+        padding: 1rem 1.5rem;
+    }
+    .top-nav .logo span{
+        color: #fff;
+    }
+    .top-nav .close{
+        color: #fff;
+        font-size: 2.3rem;
+        padding: 1rem;
+        cursor: pointer;
+    }
+    .hamburger{
+        display: block;
+        color: #fff;
+        font-size: 2.3rem;
+        padding: 0.5rem;
+        cursor: pointer;
+    }
+    .nav-link:link,
+    .nav-link:visited{
+        display: block;
+   font-size: 1.7rem;
+   color: black;
+    padding: 2rem 0;
+}
+.nav-list{
+    flex-direction: column;
+    align-items: center;
+    padding: 5rem 1.6rem;
+}
+body.show::before{
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 1;
+}
+.nav.show{
+    background-color: rgb(115, 241, 193);
+}
+}
+.todoContainer{
+   width: 50rem;
+   height: 100%;
+    background-color: #fff;
+    display: block;
+    margin: 0 auto;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+.todoheading {
+    display: block;
+    font-size: 2rem;
+   padding: 2.5rem 1rem;
+
+}
+.textInput{
+    width: 30rem;
+    padding: 1rem 1rem;
+}
+.addBtn{
+    padding: .5rem .2rem;
+    width: 10rem;
+    color: rgb(2, 2, 2);
+    background-color: rgb(158, 250, 250);
+   border-radius: .5rem;
+    transition: all 300ms ease-in-out;
+    font-family: 'RocknRoll One', sans-serif;
+}
+.addBtn:hover{
+    border-radius: 0.3rem;
+    background-color: #ff9050;
+}
+.dispalytodo{
+    border: 1px solid;
+    border-radius: 2rem;
+    width: 32rem;
+    display: block;
+    margin: 0 auto;
+    /* margin-left: 10px; */
+    overflow: hidden;
+}
+.todoList{
+    display: flex;
+    flex-direction: column;
+}
+.listItem{
+    position: relative;
+    width: 35rem;
+    margin-bottom: 5px;
+    background: beige;
+    border-radius: .5rem;
+    padding: 1rem 1rem;
+    cursor: default;
+    overflow: hidden;
+    word-wrap: break-word;
+    text-align: start;
+    
+}
+.icone{
+    position: absolute;
+    top: 0;
+    right: 2px;
+    background: rgb(29, 29, 204);
+    color: cornsilk;
+    width: 40px;
+    text-align: center;
+    padding: 10px 10px;
+    border-radius: 0 3px 3px 0;
+    cursor: pointer;
+}
+@media only screen and (max-width:480px){
+    .listItem{    
+        width: 25rem; 
+        
+    }
+    .icone{
+        width: 30px;}
+        .textInput {
+           margin: 0 auto;
+        margin-left: 2px;
+            display: flex;
+            flex-direction: column
+        }
+}
